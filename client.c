@@ -6,7 +6,7 @@
 /*   By: frgutier <frgutier@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 07:32:50 by frgutier          #+#    #+#             */
-/*   Updated: 2022/12/02 07:44:17 by frgutier         ###   ########.fr       */
+/*   Updated: 2022/12/05 08:59:45 by frgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 
 static void	server_signal_handler(int server_signal)
 {
-	static int	signals_received;
+	static int	signals_received = 0;
 
-	signals_received = 0;
 	if (server_signal == SIGUSR1)
 		signals_received++;
 	else
